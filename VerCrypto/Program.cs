@@ -10,10 +10,6 @@ namespace VerCrypto
     {
         static void Main(string[] args)
         {
-            CryptoList cl = new CryptoList();
-
-            Console.WriteLine(cl.count);
-
             Console.ReadKey();
         }
     }
