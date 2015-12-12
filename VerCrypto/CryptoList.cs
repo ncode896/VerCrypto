@@ -11,7 +11,7 @@ namespace VerCrypto
     {
         private class Node
         {
-            public int item { get; private set; }
+            public int item { get; set; }
             public char letter { get; private set; }
             public Node next { get; set; }
             public Node(int a, char ch, Node n)
@@ -52,7 +52,7 @@ namespace VerCrypto
             count++;
         }
 
-        private int find(char c)
+        private int findget(char c)
         {
             Node current = root;
             while(current!=null)
@@ -62,16 +62,28 @@ namespace VerCrypto
             }
             return -1;
         }
-
+        private void findset(char c, int item)
+        {
+            Node current = root;
+            while (current != null)
+            {
+                if (current.letter == c)
+                {
+                    current.item = item;
+                }
+                else current = current.next;
+            }
+        }
+        
         public int this[char i]
         {
             get
             {
-                return find(i);
+                return findget(i);
             }
             set
             {
-                array[i] = value;
+                findset(i, value);
             }
         }
        
