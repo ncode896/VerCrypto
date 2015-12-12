@@ -71,7 +71,7 @@ namespace VerCrypto
                 {
                     current.item = item;
                 }
-                else current = current.next;
+                current = current.next;
             }
         }
         

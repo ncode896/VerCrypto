@@ -14,6 +14,10 @@ namespace VerCrypto
 
             Console.WriteLine(cl.count);
 
+            cl['a'] += 10;
+            cl['c'] = 100;
+            for (char c = 'a'; c <= 'f'; c++)
+                Console.WriteLine(cl[c]);
             Console.ReadKey();
         }
     }
